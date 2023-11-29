@@ -23,7 +23,6 @@ import tempfile
 import glob
 import pandas as pd
 import copy
-from pathlib import Path
 
 class Synthe:
     def __init__(self):
@@ -42,9 +41,6 @@ class Synthe:
 
     def _create_temp_direcotry_and_run_SYNTHE(self, model):
         with tempfile.TemporaryDirectory(prefix="synthe_") as tmpdirname:
-            p = Path(tmpdirname)
-            if not p.is_dir():
-                p.mkdir(parents=True)
             spectrum = self._compute_spectrum(tmpdirname, model)
         return spectrum 
 
