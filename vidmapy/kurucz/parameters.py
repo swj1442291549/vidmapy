@@ -11,14 +11,14 @@ import copy
 
 class Parameters:
     def __init__(self, 
-                    teff=5777, 
+                    teff=5777., 
                     logg=4.44, 
                     metallicity=0.0, 
                     microturbulence=2.0, 
                     vsini=0.,
                     resolution=100000,
-                    wave_min=4000,
-                    wave_max=7000,
+                    wave_min=4000.,
+                    wave_max=7000.,
                     **kwargs):
         self.teff = teff
         self.logg = logg
